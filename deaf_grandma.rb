@@ -5,12 +5,16 @@ conversation_with_grandma = "yes"
 
 while conversation_with_grandma  == "yes"
 	speech = gets.chomp.to_s
+
+	if speech == "BYE"
+		puts "BYE DEAR"
+		break
+	end 
+	
 	if speech != speech.to_s.upcase
 		puts "HUH? SPEAK UP, SONNY"
 	else 
 		puts "NO, NOT SINCE #{random_year}"
-		if speech == "BYE"
-			break
-		end
+		
 	end 
 end
