@@ -15,6 +15,8 @@ while conversation_with_grandma  == "yes"
 			puts "BYE DEAR"
 			break
 		end
+	else
+		bye_count -= 1 
 	end 
 	
 	if speech != speech.to_s.upcase
