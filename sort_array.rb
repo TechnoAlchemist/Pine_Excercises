@@ -1,17 +1,16 @@
-puts "Please enter as many words as possible"
-random_words = []
-# user_word = gets.chomp.to_s
-# random_words << user_word
+continous_words = "yes"
+range_of_words = []
 
-sorting_stuff = "yes"
+while continous_words == "yes"
+	puts "Please enter some random words"
+	random_words = gets.chomp.to_s
+	range_of_words << random_words
 
-while sorting_stuff == "yes"
-	user_word = gets.chomp.to_s
-	random_words << user_word
-
+	if random_words == "exit"
+		range_of_words.pop
+		break
+	end
 end
 
-random_words.sort do |x,y|
-	y <=> x
-end
-
+range_of_words.sort!
+puts range_of_words
