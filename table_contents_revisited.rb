@@ -28,7 +28,7 @@ all_the_chapters << chapter_three
 puts title.center(line_width)
 
 all_the_chapters.each_with_index do |chap, index|
-	# binding.pry
+	
 	line_width = 30
 	name, page = chap
 	chap_num = index + 1
@@ -36,7 +36,11 @@ all_the_chapters.each_with_index do |chap, index|
 	# puts "#{page}"
 	# puts "Chapter #{chap_num}"
 	# puts chapter + 1 
-	 puts page
+	# binding.pry
+	puts name.ljust(30) + page.rjust(30)
+	
+
+
 
 	# puts "Chapter #{chap_num}".ljust(line_width) + page.rjust(line_width/2)
 end
