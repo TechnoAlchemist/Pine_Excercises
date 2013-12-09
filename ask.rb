@@ -1,15 +1,13 @@
-def ask (question)
+def ask(question)
   while true
     puts question
     reply = gets.chomp.downcase
-    
-    if (reply == 'yes' || reply == 'no')
-      return reply
-    else
-      puts 'Please answer "yes" or "no".'
-    end
-  end  
+
+    return true if reply == 'yes'
+    return false if reply == 'no'
+    puts 'Please answer "yes" or "no".'
+  end
 end
 
-ask('Do you like eating tacos?')
-puts "Thank you"
+interest = ask('Do you like fish tacos?')
+puts interest
